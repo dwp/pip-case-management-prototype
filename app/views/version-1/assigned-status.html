@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Assigned cases
+    </h1>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">NINO</th>
+          <th scope="col" class="govuk-table__header">ID</th>
+          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="col" class="govuk-table__header">Case manager/th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Fran Cliffe</a></td>
+          <td class="govuk-table__cell">RN 22 10 00 E</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          <td class="govuk-table__cell">Jared-Mosely Radman</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Xia Jeana</a></td>
+          <td class="govuk-table__cell">RN 00 02 22 A</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          <td class="govuk-table__cell">Jared-Mosely Radman</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail">Noelle Carmel</a></td>
+          <td class="govuk-table__cell">RN 00 04 26 D</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          <td class="govuk-table__cell">Zoe Hall</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail">Fran Simone</a></td>
+          <td class="govuk-table__cell">RN 00 10 00 E</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          <td class="govuk-table__cell">Zoe Hall</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="claimant-detail-reveiwingclaim" aria-describedby="claimant-detail">Jane Doe</a></td>
+          <td class="govuk-table__cell">RN 03 44 26 C</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          <td class="govuk-table__cell">Zoe Hall</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail">Danya Cecylia</a></td>
+          <td class="govuk-table__cell">RN 00 01 33 A</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          <td class="govuk-table__cell">Akhtar Ahmed</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail-review">John Brady</a></td>
+          <td class="govuk-table__cell">RN 00 01 96 Z</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          <td class="govuk-table__cell">Akhtar Ahmed</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail-review">Sam Smart</a></td>
+          <td class="govuk-table__cell">RN 00 09 83 A</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          <td class="govuk-table__cell">Akhtar Ahmed</td>
+        </tr>
+       
+        
+        
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

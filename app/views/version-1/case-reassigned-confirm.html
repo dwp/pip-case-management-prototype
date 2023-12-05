@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">Case moved to Zoe Hall's caseload</h1>
+    </div>
+
+    <p class="govuk-body">Go back to continue reassigning cases to caseloads or view cases.</p>
+
+    <p>
+      <a href="caseload-one" aria-describedby="claimant-detail">Back to case list</a>
+    </p>
+
+
+  </div>
+</div>
+
+{% endblock %}

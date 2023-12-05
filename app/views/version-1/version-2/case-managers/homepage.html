@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Home Page</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="dwp-card dwp-card--clickable">
+      <div class="dwp-card__content">
+        <h2 class="dwp-card__heading dwp-heading-m">
+          <a class="dwp-card__link" href="active-cases.html">View your active cases</a>
+        </h2>
+        
+      </div>
+    </div>
+
+ <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="dwp-card dwp-card--clickable">
+          <div class="dwp-card__content">
+            <h2 class="dwp-card__heading dwp-heading-m">
+              <a class="dwp-card__link" href="find-a-claimant.html">Get another case</a>
+            </h2>
+            
+          </div>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <div class="dwp-card dwp-card--clickable">
+              <div class="dwp-card__content">
+                <h2 class="dwp-card__heading dwp-heading-m">
+                  <a class="dwp-card__link" href="new-cases.html">Search for a claimant</a>
+                </h2>
+                
+              </div>
+            </div>      
+
+{% endblock %}

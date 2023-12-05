@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Select the cases you want to assign
+    </h1>
+    <form action="assign-cases" method="post">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Select</th>
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">NINO</th>
+          <th scope="col" class="govuk-table__header">ID</th>
+          <th scope="col" class="govuk-table__header">Date</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+              <input type="checkbox" class="govuk-checkboxes__input" name="row1" value="row1" id="select">
+              <label class="govuk-label govuk-checkboxes__label" for="row1">
+                  <span class="govuk-visually-hidden">Select row 1</span>
+              </label>
+            </div></td>
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Fran Cliffe</a></td>
+          <td class="govuk-table__cell">RN 22 10 00 E</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" name="row2" value="row2" id="select">
+            <label class="govuk-label govuk-checkboxes__label" for="row2">
+                <span class="govuk-visually-hidden">Select row 2</span>
+            </label>
+          </div></td>
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Xia Jeana</a></td>
+          <td class="govuk-table__cell">RN 00 02 22 A</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+        
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" name="row3" value="row3" id="select">
+            <label class="govuk-label govuk-checkboxes__label" for="row3">
+                <span class="govuk-visually-hidden">Select row 3</span>
+            </label>
+          </div></td>
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail">Noelle Carmel</a></td>
+          <td class="govuk-table__cell">RN 00 04 26 D</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" name="row4" value="row4" id="select">
+            <label class="govuk-label govuk-checkboxes__label" for="row4">
+                <span class="govuk-visually-hidden">Select row 4</span>
+            </label>
+          </div></td>
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail">Fran Simone</a></td>
+          <td class="govuk-table__cell">RN 00 10 00 E</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" name="row5" value="row5" id="select">
+            <label class="govuk-label govuk-checkboxes__label" for="row5">
+                <span class="govuk-visually-hidden">Select row 1</span>
+            </label>
+          </div></td>
+          <td class="govuk-table__cell"><a href="claimant-detail-reveiwingclaim" aria-describedby="claimant-detail">Jane Doe</a></td>
+          <td class="govuk-table__cell">RN 03 44 26 C</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" name="row6" value="row6" id="select">
+            <label class="govuk-label govuk-checkboxes__label" for="row6">
+                <span class="govuk-visually-hidden">Select row 6</span>
+            </label>
+          </div></td>
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail">Danya Cecylia</a></td>
+          <td class="govuk-table__cell">RN 00 01 33 A</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" name="row7" value="row7" id="select">
+            <label class="govuk-label govuk-checkboxes__label" for="row7">
+                <span class="govuk-visually-hidden">Select row 7</span>
+            </label>
+          </div></td>
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail-review">John Brady</a></td>
+          <td class="govuk-table__cell">RN 00 01 96 Z</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+            <input type="checkbox" class="govuk-checkboxes__input" name="row8" value="row8" id="select">
+            <label class="govuk-label govuk-checkboxes__label" for="row8">
+                <span class="govuk-visually-hidden">Select row 8</span>
+            </label>
+          </div></td>
+          <td class="govuk-table__cell"><a href="claimant-detail-review" aria-describedby="claimant-detail-review">Sam Smart</a></td>
+          <td class="govuk-table__cell">RN 00 09 83 A</td>
+          <td class="govuk-table__cell">A4IEI3EH</td>
+          <td class="govuk-table__cell">21/09/2022</td>
+          
+        </tr>
+       
+  
+      </tbody>
+    </table>
+    <!--Hard coded button-->
+<a href="assign-cases" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Next
+  </a>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

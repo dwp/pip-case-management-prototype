@@ -1,0 +1,233 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <h1 class="govuk-heading-l">
+      Jack Barnes's assigned cases
+    </h1>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+        <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5">
+          Filters
+        </h2>
+        <div id="filter-hint" class="govuk-hint govuk-!-Marchgin-bottom-4">
+          Select one or more filters to apply to the list.
+        </div>
+        <div class="table-filter">
+          <form id="filters">
+            <!--Filters-->
+    
+            {{ govukCheckboxes({
+            idPrefix: "caseType",
+            name: "caseType",
+            classes: "govuk-checkboxes--small",
+            fieldset: {
+            legend: {
+            text: "Case type",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+            }
+            },
+            items: [
+            {
+            id: "srel",
+            value: "srel",
+            html: "Special rules for end of life (<span id='srelCount'>2</span>)"
+            }
+            ]
+            }) }}
+    
+            {{ govukCheckboxes({
+            idPrefix: "benefitType",
+            name: "benefit-type",
+            classes: "govuk-checkboxes--small",
+            fieldset: {
+            legend: {
+            text: "Benefit type",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+            }
+            },
+            items: [
+            {
+            id: "esa",
+            value: "esa",
+            text: "Employment Support Allowance (13)"
+            },
+            {
+            id: "pip",
+            value: "pip",
+            text: "Personal Independence Payment (25)"
+            },
+            {
+            id: "uc",
+            value: "uc",
+            text: "Universal Credit (22)"
+            }
+            ]
+            }) }}
+    
+            {{ govukCheckboxes({
+            idPrefix: "assessmentCentre",
+            name: "assessment-centre",
+            classes: "govuk-checkboxes--small",
+            fieldset: {
+            legend: {
+            text: "Assessment centre",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+            }
+            },
+            items: [
+            {
+            id: "handsworth",
+            value: "handsworth",
+            text: "Birmingham Handsworth (22)"
+            },
+            {
+            id: "doncaster",
+            value: "doncaster",
+            text: "Doncaster site name (8)"
+            },
+            {
+            id: "leeds",
+            value: "leeds",
+            text: "Leeds site name (10)"
+            },
+            {
+            id: "tresco",
+            value: "tresco",
+            text: "London Tresco House (20)"
+            }
+            ]
+            }) }}
+    
+            <button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
+          </form>
+    
+    
+    
+        </div>
+      </div>
+
+        <div class="govuk-grid-column-three-quarters">
+
+    <table class="govuk-table" data-module="moj-sortable-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+    
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Name</th>
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">Elevation</th>
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">Continent</th>
+    
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">First summit</th>
+    
+        </tr>
+      </thead>
+    
+      <tbody class="govuk-table__body">
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell">Aconcagua</td>
+    
+          <td class="govuk-table__cell" data-sort-value="6961">6,961 meters</td>
+    
+          <td class="govuk-table__cell">South America</td>
+    
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897">1897</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell">Denali</td>
+    
+          <td class="govuk-table__cell" data-sort-value="6194">6,194 meters</td>
+    
+          <td class="govuk-table__cell">North America</td>
+    
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1913">1913</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell">Elbrus</td>
+    
+          <td class="govuk-table__cell" data-sort-value="5642">5,642 meters</td>
+    
+          <td class="govuk-table__cell">Europe</td>
+    
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1874">1874</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell">Everest</td>
+    
+          <td class="govuk-table__cell" data-sort-value="8850">8,850 meters</td>
+    
+          <td class="govuk-table__cell">Asia</td>
+    
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1953">1953</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell">Kilimanjaro</td>
+    
+          <td class="govuk-table__cell" data-sort-value="5895">5,895 meters</td>
+    
+          <td class="govuk-table__cell">Africa</td>
+    
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1889">1889</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell">Puncak Jaya</td>
+    
+          <td class="govuk-table__cell" data-sort-value="4884">4,884 meters</td>
+    
+          <td class="govuk-table__cell">Australia</td>
+    
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1962">1962</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell">Vinson</td>
+    
+          <td class="govuk-table__cell" data-sort-value="4897">4,897 meters</td>
+    
+          <td class="govuk-table__cell">Antarctica</td>
+    
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1966">1966</td>
+    
+        </tr>
+    
+      </tbody>
+    </table>
+    
+    
+  </div>
+</div>
+{% endblock %}

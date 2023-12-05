@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--m" for="search-name">
+        <span class="govuk-caption-l govuk-!-margin-bottom-2">Find a claimant</span>
+        <h1 class="govuk-heading-l">
+          Search by claimant's name or National Insurance number
+        </h1></label>
+      <input class="govuk-input" id="search-name" name="search-name" type="text">
+    </div>
+    <a href="claimant-detail-review" aria-describedby="search-referral">
+      <button class="govuk-button" data-module="govuk-button">
+        Search
+      </button>
+    </a>
+
+  </div>
+</div>
+
+{% endblock %}

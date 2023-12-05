@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">
+      Active cases
+    </h1>
+
+    <table class="govuk-table" data-module="moj-sortable-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+    
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Name</th>
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">ID</th>
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">NINO</th>
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">Event</th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">Next action due</th>
+    
+        </tr>
+      </thead>
+    
+      <tbody class="govuk-table__body">
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="/" aria-describedby="/">Fran Cliffe</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="6961">12345</td>
+    
+          <td class="govuk-table__cell">QQ 12 34 56 C</td>
+
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag">In review</strong></td>
+
+          <td class="govuk-table__cell">2 days</td>
+    
+          
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="/" aria-describedby="/">Jane Doe</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="6194">12345</td>
+    
+          <td class="govuk-table__cell">QQ 12 34 56 C</td>
+
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag">In review</strong></td>
+
+          <td class="govuk-table__cell">2 days</td>
+    
+          
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="/" aria-describedby="/">John Smith</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="5642">12345</td>
+
+          <td class="govuk-table__cell">QQ 12 34 56 C</td>
+
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag">In review</strong></td>
+
+          <td class="govuk-table__cell">2 days</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="/" aria-describedby="/">Laurel Ashley</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="8850">12345</td>
+
+       <td class="govuk-table__cell">QQ 12 34 56 C</td>
+
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Decision</strong></td>
+
+          <td class="govuk-table__cell">2 days</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="/" aria-describedby="/">Rob Frame</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="5895">12345</td>
+    
+             <td class="govuk-table__cell">QQ 12 34 56 C</td>
+
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Decision</strong></td>
+
+          <td class="govuk-table__cell">2 days</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="/" aria-describedby="/">Kate Crow</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="4884">12345</td>
+    
+          <td class="govuk-table__cell">QQ 12 34 56 C</td>
+
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">With provider</strong></td>
+
+          <td class="govuk-table__cell">2 days</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="/" aria-describedby="/">Kevin Smyth</a></td>
+    
+          <td class="govuk-table__cell" data-sort-value="4897">12345</td>
+    
+          <td class="govuk-table__cell">QQ 12 34 56 C</td>
+
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">With provider</strong></td>
+
+          <td class="govuk-table__cell">2 days</td>
+    
+        </tr>
+    
+      </tbody>
+    </table>
+    
+  </div>
+</div>
+{% endblock %}

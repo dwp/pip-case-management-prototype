@@ -1,0 +1,97 @@
+2023-02-09T13:53:41.573Z
+cwd: ~/Documents/Prototypes/dwp-pip-case-management
+package: govuk-prototype-kit@13.2.4
+argv: /usr/local/bin/node ~/.npm/_npx/ab0cb2c39bc0319f/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Succeeded [Check migration is being applied to a pre v13 prototype]
+2023-02-09T13:53:49.341Z
+cwd: ~/Documents/Prototypes/dwp-pip-case-management
+package: govuk-prototype-kit@13.2.4
+argv: /usr/local/bin/node ~/Documents/Prototypes/dwp-pip-case-management/node_modules/.bin/govuk-prototype-kit migrate -- ~/Documents/Prototypes/dwp-pip-case-management
+Started [Migrate config.js to config.json]
+Started [Update application SCSS file]
+Started [Deleted files that are no longer needed]
+Started [Deleted directories that are no longer needed]
+Started [Delete listen-on-port.js]
+Started [Delete server.js]
+Started [Delete VERSION.txt]
+Started [Delete Procfile]
+Started [Delete start.js]
+Started [Delete app/assets/sass/unbranded-ie8.scss]
+Started [Delete app/assets/sass/application-ie8.scss]
+Started [Remove unused directory docs]
+Started [Remove unused directory lib]
+Started [Remove unused directory public]
+Succeeded [Migrate config.js to config.json]
+Succeeded [Delete listen-on-port.js]
+Succeeded [Delete server.js]
+Succeeded [Delete VERSION.txt]
+Succeeded [Delete Procfile]
+Succeeded [Delete app/assets/sass/unbranded-ie8.scss]
+Succeeded [Delete start.js]
+Succeeded [Delete app/assets/sass/application-ie8.scss]
+Succeeded [Deleted files that are no longer needed]
+Found [// Add your routes here - above the module.exports line] in [app/routes.js], replacing
+Started [Overwrite app/assets/javascripts/application.js]
+Started [Overwrite app/filters.js]
+Started [Overwrite app/views/layout.html]
+Keeping these lines from old file
+Found [// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you] in [app/assets/sass/application.scss], replacing
+Started [Delete app/assets/images/unbranded.ico]
+Started [Delete app/assets/images/separator.png]
+Started [Delete app/assets/images/separator-2x.png]
+Started [Delete app/assets/javascripts/auto-store-data.js]
+Started [Delete app/assets/sass/unbranded.scss]
+Failed [Overwrite app/assets/javascripts/application.js]
+Copying from [node_modules/govuk-prototype-kit/prototype-starter/app/filters.js] to [app/filters.js]
+Started [Delete app/views/includes/breadcrumb_examples.html]
+Started [Delete app/views/layout_unbranded.html]
+Started [Delete app/assets/sass/patterns/_contents-list.scss]
+Started [Delete app/assets/javascripts/jquery-1.11.3.js]
+Started [Delete app/assets/sass/patterns/_related-items.scss]
+Started [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Started [Delete app/assets/sass/patterns/_task-list.scss]
+Started [Delete app/assets/sass/patterns/_pagination.scss]
+Copying from [node_modules/govuk-prototype-kit/prototype-starter/app/views/layouts/main.html] to [app/views/layout.html]
+Keeping these lines from old file
+Failed [Overwrite app/assets/javascripts/application.js]
+Succeeded [Delete app/assets/images/unbranded.ico]
+Succeeded [Delete app/assets/images/separator.png]
+Succeeded [Delete app/assets/images/separator-2x.png]
+Succeeded [Delete app/assets/javascripts/auto-store-data.js]
+Succeeded [Delete app/assets/sass/unbranded.scss]
+Succeeded [Delete app/assets/sass/patterns/_contents-list.scss]
+Succeeded [Delete app/views/includes/breadcrumb_examples.html]
+Succeeded [Delete app/views/layout_unbranded.html]
+Succeeded [Delete app/assets/javascripts/jquery-1.11.3.js]
+Succeeded [Delete app/assets/sass/patterns/_related-items.scss]
+Succeeded [Delete app/assets/sass/patterns/_task-list.scss]
+Succeeded [Delete app/assets/sass/patterns/_mainstream-guide.scss]
+Succeeded [Delete app/assets/sass/patterns/_pagination.scss]
+Succeeded [Update application SCSS file]
+//,// For guidance on how to create routes see:,// https://prototype-kit.service.gov.uk/docs/create-routes,//,,const govukPrototypeKit = require('govuk-prototype-kit'),const router = govukPrototypeKit.requests.setupRouter(),,// Add your routes here,,,// Route for filtering case by status or case manager,,router.post('/filter-cases', function(req, res) {,    if (req.body['filter-cases'] === 'caseload') {,      res.redirect('choose-caseload');,    } else if (req.body['filter-cases'] === 'status') {,      res.redirect('choose-status');,    },  });,,  // Route for assigning cases or creating a new caseload,,  router.post('/assign-cases', function(req, res) {,    if (req.body['case-manager'] === 'Jack Barnes') {,      res.redirect('case-assigned-confirm');,    } if (req.body['case-manager'] === 'create-caseload') {,      res.redirect('create-new-caseload');,    },  });,,module.exports = router,
+Found [module.exports = router;,module.exports = router] in [app/routes.js], removing
+Succeeded [Remove unused directory lib]
+Succeeded [Remove unused directory public]
+Succeeded [Update routes file]
+Succeeded [Remove unused directory docs]
+Succeeded [Deleted directories that are no longer needed]
+Succeeded [Overwrite app/filters.js]
+Started [Delete app/views/includes/scripts.html]
+Started [Delete app/views/includes/head.html]
+Succeeded [Delete app/views/includes/scripts.html]
+Succeeded [Delete app/views/includes/head.html]
+Started [Remove old pattern includes from application SCSS file]
+Succeeded [Remove old pattern includes from application SCSS file]
+Started [Remove empty directory app/assets/sass/patterns]
+Started [Remove empty directory app/views/includes]
+Started [Remove empty directory app/assets/images]
+Succeeded [Remove empty directory app/views/includes]
+Succeeded [Remove empty directory app/assets/sass/patterns]
+Succeeded [Remove empty directory app/assets/images]
+2023-02-20T10:53:16.866Z
+cwd: ~/Documents/Prototypes/prototype-pip-case-management
+package: govuk-prototype-kit@13.2.4
+argv: /usr/local/bin/node ~/Documents/Prototypes/prototype-pip-case-management/node_modules/.bin/govuk-prototype-kit migrate
+Started [Check migration is being applied to a pre v13 prototype]
+Failed [Check migration is being applied to a pre v13 prototype]

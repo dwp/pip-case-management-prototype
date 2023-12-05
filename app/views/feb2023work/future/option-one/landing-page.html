@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block header %}
+<header class="govuk-header dwp-header" data-module="govuk-header">
+  <div class=" govuk-width-container ">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+              <a href="#" class="govuk-header__link govuk-header__link--service-name">
+                  PIP Case review
+              </a>
+          </div></div></header>
+
+<!--Primary nav-->
+
+<div class="moj-primary-navigation">
+
+  <div class="moj-primary-navigation__container">
+
+    <div class="moj-primary-navigation__nav">
+
+      <nav class="moj-primary-navigation" aria-label="Primary navigation">
+
+        <ul class="moj-primary-navigation__list">
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" aria-current="page" href="#1">Cases</a>
+          </li>
+
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" href="#2">Find a claimant</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <h1 class="govuk-heading-l">
+      Assigned cases
+    </h1>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+      
+        <table class="govuk-table" data-module="moj-sortable-table">
+      
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+        
+              <th scope="col" class="govuk-table__header" aria-sort="ascending">Name</th>
+        
+              <th scope="col" class="govuk-table__header" aria-sort="none">ID</th>
+        
+              <th scope="col" class="govuk-table__header" aria-sort="none">NINO</th>
+      
+              <th scope="col" class="govuk-table__header" aria-sort="none">Date</th>
+
+              <th scope="col" class="govuk-table__header" aria-sort="none">Case type</th>
+
+              <th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
+        
+            </tr>
+          </thead>
+      
+          <tbody class="govuk-table__body">
+          
+            <tr class="govuk-table__row">
+        
+              <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Fran Cliffe</a></td>
+        
+              <td class="govuk-table__cell">123IEU3I2</td>
+        
+              <td class="govuk-table__cell">RN 22 10 00 E</td>
+        
+              <td class="govuk-table__cell">28/02/23</td>
+
+              <td class="govuk-table__cell">New claim</td>
+
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Assigned</strong></td>
+      
+            </tr>
+          </tbody>
+          </table>
+
+
+
+    
+    
+    
+  </div>
+</div>
+{% endblock %}

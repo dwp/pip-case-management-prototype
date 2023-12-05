@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">Caseload created for {{ data['case-manager'] }} and case added to it</h1>
+    </div>
+
+    <p class="govuk-body">Go back to continue assigning cases to caseloads or view active cases.</p>
+
+    <p>
+      <a href="new-cases" aria-describedby="claimant-detail">Back to new cases.</a>
+    </p>
+
+
+  </div>
+</div>
+
+{% endblock %}

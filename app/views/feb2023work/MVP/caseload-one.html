@@ -1,0 +1,280 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+    <h1 class="govuk-heading-l">
+      Jack Barnes's cases
+    </h1>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+        <h2 class="govuk-heading-m govuk-!-Marchgin-bottom-5">
+          Filters
+        </h2>
+        <div id="filter-hint" class="govuk-hint govuk-!-Marchgin-bottom-4">
+          Select one or more filters to apply to the list.
+        </div>
+        <div class="table-filter">
+          <form id="filters">
+            <!--Filters-->
+    
+            {{ govukCheckboxes({
+            idPrefix: "caseType",
+            name: "caseType",
+            classes: "govuk-checkboxes--small",
+            fieldset: {
+            legend: {
+            text: "Case type",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+            }
+            },
+            items: [
+            {
+            id: "srel",
+            value: "srel",
+            html: "Special rules for end of life (<span id='srelCount'>2</span>)"
+            },
+            {
+              id: "newclaim",
+              value: "newclaim",
+              html: "New claim (<span id='newclaimCount'>2</span>)"
+              },
+              {
+                id: "awardreview",
+                value: "awardreview",
+                html: "Award Review (<span id='awardreviewCount'>2</span>)"
+                }
+            ]
+            }) }}
+    
+            {{ govukCheckboxes({
+            idPrefix: "Status",
+            name: "Status",
+            classes: "govuk-checkboxes--small",
+            fieldset: {
+            legend: {
+            text: "Status",
+            isPageHeading: false,
+            classes: "govuk-fieldset__legend--s"
+            }
+            },
+            items: [
+            {
+            id: "inreview",
+            value: "inreview",
+            text: "In Review (2)"
+            },
+            {
+            id: "decision",
+            value: "decision",
+            text: "Decision (2)"
+            },
+            {
+            id: "blocked",
+            value: "blocked",
+            text: "Blocked (2)"
+            }
+            ]
+            }) }}
+
+            {{ govukCheckboxes({
+              idPrefix: "actiondue",
+              name: "actiondue",
+              classes: "govuk-checkboxes--small",
+              fieldset: {
+              legend: {
+              text: "Action due",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+              }
+              },
+              items: [
+              {
+              id: "outstanding",
+              value: "outstanding",
+              text: "Outstanding (2)"
+              },
+              {
+              id: "duenow",
+              value: "duenow",
+              text: "Due now (2)"
+              },
+              {
+              id: "2days",
+              value: "2days",
+              text: "2 days (2)"
+              }
+              ]
+              }) }}
+    
+           
+    
+            <button class="govuk-button govuk-button--secondary govuk-!-Marchgin-bottom-8">Apply filters</button>
+          </form>
+    
+    
+    
+        </div>
+      </div>
+
+
+<!--Dashboard table-->
+
+
+        <div class="govuk-grid-column-three-quarters">
+
+    <table class="govuk-table" data-module="moj-sortable-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+    
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Name</th>
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">NINO</th>
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">Date</th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">Case type</th>
+
+          <th scope="col" class="govuk-table__header" aria-sort="none">Status</th>
+    
+          <th scope="col" class="govuk-table__header" aria-sort="none">Next action due</th>
+    
+        </tr>
+      </thead>
+    
+      <tbody class="govuk-table__body">
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Fran Cliffe</a></td>
+    
+          <td class="govuk-table__cell" >RN 22 10 00 E</td>
+    
+          <td class="govuk-table__cell">01/02/2023</td>
+    
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">
+            In review
+          </strong></td>
+
+          <td class="govuk-table__cell">Outstanding</td>
+    
+        </tr>
+
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Simon Jones</a></td>
+    
+          <td class="govuk-table__cell" >RN 22 10 00 E</td>
+    
+          <td class="govuk-table__cell">01/02/2023</td>
+    
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+            Awaiting decision
+          </strong></td>
+
+          <td class="govuk-table__cell">Outstanding</td>
+    
+        </tr>
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Xia Jeana</a></td>
+    
+          <td class="govuk-table__cell" >RN 22 10 00 E</td>
+    
+          <td class="govuk-table__cell">01/02/2023</td>
+    
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+            Awaiting decision
+          </strong></td>
+
+          <td class="govuk-table__cell">Outstanding</td>
+    
+        </tr> 
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Noelle Carmel</a></td>
+    
+          <td class="govuk-table__cell" >RN 22 10 00 E</td>
+    
+          <td class="govuk-table__cell">01/02/2023</td>
+    
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">
+            In review
+          </strong></td>
+
+          <td class="govuk-table__cell">Outstanding</td>
+    
+        </tr> 
+
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Fran Simone</a></td>
+    
+          <td class="govuk-table__cell" >RN 22 10 00 E</td>
+    
+          <td class="govuk-table__cell">01/02/2023</td>
+    
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+            Blocked
+          </strong></td>
+
+          <td class="govuk-table__cell">Outstanding</td>
+    
+        </tr> 
+    
+        <tr class="govuk-table__row">
+    
+          <td class="govuk-table__cell"><a href="claimant-detail-assigned" aria-describedby="claimant-detail-assigned">Jane Doe</a></td>
+    
+          <td class="govuk-table__cell" >RN 22 10 00 E</td>
+    
+          <td class="govuk-table__cell">01/02/2023</td>
+    
+          <td class="govuk-table__cell">New claim</td>
+
+          <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">
+            Blocked
+          </strong></td>
+
+          <td class="govuk-table__cell">Outstanding</td>
+    
+        </tr> 
+    
+       
+    
+  
+    
+      </tbody>
+    </table>
+
+    <button type="submit" class="govuk-button">
+     Get new case
+  </button>
+    
+    
+  </div>
+</div>
+{% endblock %}
